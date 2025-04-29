@@ -73,8 +73,8 @@ app.get('/api/afd/gerar', (req, res) => {
       const numeroSerieREP = 'IDREP123456789'; // Tipo 1
       const tipoIdentificador = '1'; // 1 = CNPJ
       const cnpj = '12345678000199'.padStart(14, '0');
-      const razaoSocial = 'EMPRESA FICTICIA LTDA'.padEnd(150, ' ');
-      const endereco = 'RUA EXEMPLO, 123 - CENTRO - SP'.padEnd(100, ' '); // Tipo 2
+      const razaoSocial = 'EMPRESA LTDA'.padEnd(150, ' ');
+      const endereco = 'RUA EXEMPLO, 123 - CENTRO - FRANCA SP'.padEnd(100, ' '); // Tipo 2
   
       const linhas = [];
   

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": ".",                      // importante para paths relativos
+    "incremental": true,
+    "strict": true,
+    "moduleResolution": "node",         // garante resolução de módulos compatível com Node
+    "resolveJsonModule": true,          // permite importar arquivos JSON
+    "types": ["node", "jest"],
+    "paths": {
+      "@/*": ["src/*"]                  // alias mais comum para importar com @/
+    }
+  },
+  "exclude": ["node_modules", "dist", "test", "**/*.spec.ts"]
+}

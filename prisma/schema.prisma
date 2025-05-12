@@ -1,0 +1,37 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Funcionario {
+  id             Int              @id @default(autoincrement())
+  nome           String
+  cpf            String           @unique
+  pis            String           @unique
+  email          String           @unique
+  matricula      String
+  registros      RegistroPonto[]
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+}
+
+model RegistroPonto {
+  id              Int         @id @default(autoincrement())
+  funcionario     Funcionario @relation(fields: [funcionarioId], references: [id])
+  funcionarioId   Int
+  dataHoraEntrada DateTime
+  dataHoraSaida   DateTime?
+  latitude        String?
+  longitude       String?
+  observacao      String?
+  tipoRegistro    String      @default("MANUAL")
+  status          String      @default("NORMAL")
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+}

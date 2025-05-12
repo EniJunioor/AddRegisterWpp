@@ -1,0 +1,43 @@
+{
+  "name": "api-endpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "scripts": {
+    "start": "nest start",
+    "start:dev": "npx nest start --watch"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.0",
+    "@nestjs/core": "^11.1.0",
+    "@nestjs/passport": "^11.0.5",
+    "@nestjs/platform-express": "^11.1.0",
+    "@nestjs/typeorm": "^11.0.0",
+    "@prisma/client": "^6.7.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1",
+    "passport-jwt": "^4.0.1",
+    "pdfkit": "^0.17.1",
+    "pg": "^8.15.6",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "typeorm": "^0.3.23"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "@nestjs/testing": "^11.1.0",
+    "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.15.17",
+    "@types/pdfkit": "^0.13.9",
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "@typescript-eslint/parser": "^8.32.0",
+    "eslint": "^9.26.0",
+    "globals": "^16.1.0",
+    "prisma": "^6.7.0",
+    "typescript-eslint": "^8.32.0"
+  }
+}
